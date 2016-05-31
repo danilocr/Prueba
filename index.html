@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>INGRESO DE DATOS</title>
+   <style type="text/css">
+   		body{ 
+   		background-color: #39AC87;
+   		}
+    	#Cabezera{
+    	font-size: 50px;
+    	background-color: #222222;
+    	color: white;
+    	text-align:center;
+    	}
+    	#Cuerpo{
+    		border: 5px solid blue;
+    		text-align: center;
+    		padding: 20px;
+    		margin-left: 25%;
+			margin-right: 25%;
+    		margin-top: 30px;
+    	}
+    	#CuerpoIzq{
+			width: 50%;
+       	}
+    	#CuerpoDer{
+			width: 50%;	
+		}
+    	#CIAr {
+    		color: red;
+    		font-size: 40px;
+    	}
+    	#teclado{
+    		padding: 30px;
+    	}
+		#CDAr{
+			color: blue;
+    		font-size: 20px;
+    		padding: 20px;
+    	}
+    	#CDAb {
+			color: black;
+			font-size: 20px;
+    	}
+    </style>
+    <script type="text/javascript">
+    	function comprobar(){
+        	var cue= document.datos.numTar1.value+""+document.datos.numTar2.value+""+document.datos.numTar3.value+""+document.datos.numTar4.value;
+        	var tar= document.datos.tipTar.value;
+        	var pin= document.datos.pin.value;
+    		if(cue==""||cue.length!=16){
+    			alert("NUMERO DE TARJETA INVALIDA");
+    			return false;
+    		}
+    		if(tar=="Selec"){
+    			alert("SELECCIONE EL TIPO DE TARJETA");
+    			return false;
+    		}
+    		if(pin==""||pin.length!=6){
+    			alert("PIN INCORRECTO");
+    			return false;
+    		}
+    		return true;
+    	}
+    </script>
+  </head>
+  <body>
+    <form  method="post" action="lab02_02_20150958" name="datos" onsubmit="return comprobar()" > 
+    <div id="Cabezera">
+    	Banca Electrónica
+    </div>
+    <table id="Cuerpo">
+    <tr>
+    <td id="CuerpoIzq">
+    	<div id="CIAr">
+    		<p>Tu Tarjeta</p>
+    		<select name="tipTar"  >
+    			<option value="Selec" selected="Selecciona"> Selecciona </option>
+    			<option value="Ahorro">Ahorro</option>
+    			<option value="Empresarial">Empresarial</option>
+    		</select>
+   	 	</div>
+   	 	    <div id="teclado" ><br>
+   	 	    TECLADO VIRTUAL<br> <br>
+   	
+    		</div>
+    </td>
+    <td id="CuerpoDer"> 
+		<div id="CDAr"><p>
+        	Numero de Tarjeta </p>
+    		<input type="text" name="numTar1" maxlength="4" size="1">
+    		<input type="text" name="numTar2" maxlength="4" size="1">
+    		<input type="text" name="numTar3" maxlength="4" size="1">
+    		<input type="text" name="numTar4" maxlength="4" size="1">
+    	</div>
+    	<div id="CDAb">
+    		<h3> Tu clave de Internet (6 dígitos)</h3>
+    		<input type="password" name="pin" maxlength="6" size="6">
+    		<input type="submit" value="INGRESAR"> 
+    	</div>
+    </td>
+    </tr>
+   </table>
+    </form>
+  </body>
+</html>
+
