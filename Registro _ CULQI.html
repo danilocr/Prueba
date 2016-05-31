@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://integ-panel.culqi.com/#/registro -->
+<html data-ng-app="culqi.cliente" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <title ng-bind="title + &#39;CULQI&#39;" class="ng-binding">Registro | CULQI</title>    
+    <link rel="stylesheet" href="./Registro _ CULQI_files/normalize.css">
+    <link rel="stylesheet" href="./Registro _ CULQI_files/icon-fonts.css">
+    <link rel="stylesheet" href="./Registro _ CULQI_files/culqi-main.css">
+    <link href="./Registro _ CULQI_files/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./Registro _ CULQI_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./Registro _ CULQI_files/fullcalendar.css">
+    <link rel="stylesheet" href="./Registro _ CULQI_files/bootstrap-switch.css">
+    <script src="./Registro _ CULQI_files/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="./Registro _ CULQI_files/registro.controller.js" async=""></script><script src="./Registro _ CULQI_files/registro.factory.js" async=""></script>
+</head>
+<body>
+    <!-- uiView:  --><div id="mainview" ui-view="" class="ng-scope"><!-- uiView: undefined --><ui-view class="ng-scope"><div class="container ng-scope">
+    <div class="box">
+        <div class="top">
+            <div class="logo"><img src="./Registro _ CULQI_files/logo.png" alt=""></div>
+            <h2>Regístrate</h2>
+            <!-- ngRepeat: errors in vm.error -->
+            <form id="myform" autocomplete="off" accept-charset="utf-8" data-ng-submit="vm.fnRegistrarUsuario()" novalidate="" class="ng-pristine ng-valid ng-valid-maxlength">
+                <ul class="registro">
+                    <li>
+                        <i class="icon-user-1"></i>
+                        <input id="name" class="first inputTxt indent-text ng-pristine ng-valid ng-touched" data-ng-model="vm.newuser.nombre" placeholder=" Nombres">
+                    </li>
+                    <li>
+                        <i class="icon-user-1"></i>
+                        <input type="text" id="name" data-ng-model="vm.newuser.apellidos" placeholder="Apellidos" class="inputTxt ng-pristine ng-untouched ng-valid">
+                    </li>
+                    <li class="email">
+                        <i class="icon-mail"></i>
+                        <input id="email" class="inputTxt ng-pristine ng-valid ng-touched" type="text" data-ng-blur="vm.fnValidateEmail()" data-ng-model="vm.newuser.email" placeholder="Email">
+                        <span id="email-tooltip" class="tooltip-e">
+                                <p>Correo electrónico inválido.</p>
+                        </span>
+                    </li>
+                    <li class="pass">
+                        <i class="icon-lock-1"></i>
+                        <input id="myPassword" data-ng-focus="vm.onFocusPassword(&#39;#tooltip&#39;)" data-ng-blur="vm.onBlurPassword(&#39;#tooltip&#39;)" class="inputTxt ng-pristine ng-untouched ng-valid strength ng-valid-maxlength" name="password" data-ng-model="vm.newuser.password" type="password" placeholder="Contraseña" maxlength="16" data-password="myPassword"><input style="display:none" class="strength" data-password="myPassword" type="text" name="" value=""><a data-password-button="myPassword" href="https://integ-panel.culqi.com/" class="button_strength">Show Password</a><div class="strength_meter"><div data-meter="myPassword"><p></p></div></div>
+                        <span class="tooltip" id="tooltip">
+                                <p>La contraseña es de 8 a 16 caracteres. Debe incluir una letra mayúscula, una minúscula, un dígito y un símbolo.<br> (+?.%&amp;#$!-)</p>
+                        </span>
+                    </li>
+                    <li class="repass">
+                        <i class="icon-lock-1"></i>
+                        <input class="last inputTxt ng-pristine ng-untouched ng-valid ng-valid-maxlength" data-ng-blur="vm.fnValidateRePassword()" id="myPasswordr" name="password" data-ng-model="vm.newuser.passwordretyped" type="password" placeholder="Repetir contraseña" maxlength="50">
+                    </li>
+                </ul>
+                <input class="btnSubmit" type="submit" value="Registrarme" data-ng-disabled="vm.fnCampoVacio()" disabled="disabled">
+            </form>
+            <ul class="recuperar">
+                <li><a ui-sref="login" href="https://integ-panel.culqi.com/#/login">Iniciar sesión</a></li>
+                <p>Al registrarme acepto la <a ui-sref="politicas" href="https://integ-panel.culqi.com/#/politicas-privacidad">Política de Privacidad y de Cookies</a> de Culqi.</p>
+            </ul>
+        </div>
+    </div>
+</div></ui-view></div>
+    <script src="./Registro _ CULQI_files/angular.min.js"></script>
+    <script src="./Registro _ CULQI_files/moment.min.js"></script>
+    <script src="./Registro _ CULQI_files/fullcalendar.js"></script>
+    <script src="./Registro _ CULQI_files/es.js"></script>
+    <script src="./Registro _ CULQI_files/jquery.maskMoney.min.js"></script>
+    <script src="./Registro _ CULQI_files/jquery.inputmask.bundle.min.js"></script>
+    <script src="./Registro _ CULQI_files/strength.js"></script>
+    <script src="./Registro _ CULQI_files/jquery-ui.min.js"></script>
+    <script src="./Registro _ CULQI_files/angular-ui-router.min.js"></script>
+    <script src="./Registro _ CULQI_files/ocLazyLoad.min.js"></script>
+    <script src="./Registro _ CULQI_files/angular-storage.min.js"></script>
+    <script src="./Registro _ CULQI_files/bootstrap-switch.js"></script>
+    <script src="./Registro _ CULQI_files/FileSaver.min.js"></script>
+    <script src="./Registro _ CULQI_files/angular-jwt.js"></script>
+    <script src="./Registro _ CULQI_files/circle-progress.js"></script>
+    <script src="./Registro _ CULQI_files/app.js"></script>
+    <script src="./Registro _ CULQI_files/monto.filter.js"></script>
+    <script src="./Registro _ CULQI_files/title.directive.js"></script>
+    <script src="./Registro _ CULQI_files/upload.directive.js"></script>
+    <script src="./Registro _ CULQI_files/common.factory.js"></script>
+
+
+</body></html>
